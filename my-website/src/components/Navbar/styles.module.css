@@ -1,0 +1,61 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.navbarHideable {
+  transition: transform var(--ifm-transition-fast) ease;
+}
+
+.navbarHidden {
+  transform: translate3d(0, calc(-100% - 2px), 0);
+}
+
+.navbar__title {
+  font-size: 1.2rem;
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+@media (max-width: 996px) {
+  .navbar__title {
+    font-size: 1.1rem;
+  }
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  transition: all var(--ifm-transition-fast) ease;
+  margin-left: 0.5rem;
+}
+
+.themeToggle:hover {
+  background-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-900);
+}
+
+html[data-theme='dark'] .themeToggle {
+  background-color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-emphasis-0);
+}
+
+html[data-theme='dark'] .themeToggle:hover {
+  background-color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-color-emphasis-0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .themeToggle {
+    width: 32px;
+    height: 32px;
+  }
+}

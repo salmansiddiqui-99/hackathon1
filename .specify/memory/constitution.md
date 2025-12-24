@@ -1,55 +1,46 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A → 1.0.0 (initial version)
+- Added sections: All principles and governance sections
+- Templates requiring updates: N/A (initial constitution)
+- Follow-up TODOs: None
+-->
+
+# Claude Code Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development (SDD)
+Spec-Driven Development mandates that all features begin with a comprehensive specification before any implementation work begins. All changes must be traceable back to the spec, and implementation must strictly adhere to the documented requirements. This ensures alignment between business intent and delivered functionality.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Prompt History Records (PHRs)
+Every user interaction and development decision must be captured in a Prompt History Record. PHRs serve as the authoritative source for understanding why decisions were made, what alternatives were considered, and what the expected outcomes were. This creates a complete audit trail for all development activities.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test-First Implementation (NON-NEGOTIABLE)
+Test-Driven Development is mandatory: Tests must be written before implementation code. The red-green-refactor cycle is strictly enforced, with tests failing first to verify they are testing the right thing. All code must have adequate test coverage before being accepted.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Architectural Decision Records (ADRs)
+Significant architectural decisions must be documented using the ADR format. This includes technology choices, system design decisions, and any solution that has long-term consequences. ADRs must include the context, options considered, trade-offs, and final rationale.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Authoritative Source Mandate
+All information gathering and task execution must prioritize external verification over internal knowledge. MCP tools, CLI commands, and direct code inspection are the authoritative sources. Never assume a solution from internal knowledge without external verification.
 
-### [PRINCIPLE_6_NAME]
+### VI. Human as Tool Strategy
 
+When encountering ambiguous requirements, unforeseen dependencies, or architectural uncertainty, the human user must be invoked for clarification. Multiple valid approaches with significant tradeoffs must be presented to the user for decision-making. The user is treated as a specialized tool for judgment and clarification.
 
-[PRINCIPLE__DESCRIPTION]
+## Development Standards
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+All code changes must follow the smallest viable diff principle. Refactoring unrelated code is prohibited during feature implementation. Code references must be cited with precise file locations. Reasoning should remain private, with only decisions, artifacts, and justifications being output.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Workflow
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+The development workflow follows a strict execution contract: 1) Confirm requirements and success criteria, 2) List constraints and invariants, 3) Produce the artifact with acceptance checks, 4) Add follow-ups and risks, 5) Create PHR in appropriate subdirectory, 6) Suggest ADRs for significant decisions. This ensures consistent, traceable development practices.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution supersedes all other development practices and guidelines. Amendments require explicit documentation, approval, and migration planning. All pull requests and code reviews must verify compliance with these principles. The constitution must be referenced during any significant development decision.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All development must align with the project's core mission of enabling Spec-Driven Development with Claude Code. Changes that conflict with these principles require explicit constitutional amendment before implementation.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-24 | **Last Amended**: 2025-12-24

@@ -1,0 +1,35 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: var(--robotics-lighter);
+}
+
+.featureCard {
+  height: 100%;
+  background-color: white;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  margin-bottom: 1rem;
+}
+
+.cardBody {
+  flex: 1;
+}
+
+html[data-theme='dark'] .featureCard {
+  background-color: var(--robotics-dark);
+  border: 1px solid var(--ifm-color-emphasis-500);
+}

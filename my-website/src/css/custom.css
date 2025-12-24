@@ -1,0 +1,185 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* You can override the default Docusaurus variables here. */
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1a47c4;
+  --ifm-color-primary-darkest: #153a9f;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-code-font-size: 95%;
+
+  /* Robotics theme colors */
+  --robotics-primary: #0ea5e9; /* Sky blue */
+  --robotics-secondary: #0d9488; /* Teal */
+  --robotics-accent: #f59e0b; /* Amber */
+  --robotics-dark: #1e293b; /* Slate 800 */
+  --robotics-darker: #0f172a; /* Slate 900 */
+  --robotics-light: #f1f5f9; /* Slate 100 */
+  --robotics-lighter: #f8fafc; /* Slate 50 */
+
+  /* Custom theme variables */
+  --ifm-color-emphasis-0: var(--ifm-color-gray-0);
+  --ifm-color-emphasis-100: var(--ifm-color-gray-100);
+  --ifm-color-emphasis-200: var(--ifm-color-gray-200);
+  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
+  --ifm-color-emphasis-400: var(--ifm-color-gray-400);
+  --ifm-color-emphasis-500: var(--ifm-color-gray-500);
+  --ifm-color-emphasis-600: var(--ifm-color-gray-600);
+  --ifm-color-emphasis-700: var(--ifm-color-gray-700);
+  --ifm-color-emphasis-800: var(--ifm-color-gray-800);
+  --ifm-color-emphasis-900: var(--ifm-color-gray-900);
+  --ifm-color-content: var(--ifm-color-emphasis-900);
+  --ifm-color-content-inverse: var(--ifm-color-emphasis-0);
+  --ifm-color-shadow: var(--ifm-color-emphasis-800);
+}
+
+/* Dark mode variables */
+html[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  /* Robotics dark theme colors */
+  --robotics-primary: #7dd3fc; /* Lighter sky blue for dark mode */
+  --robotics-secondary: #5eead4; /* Lighter teal for dark mode */
+  --robotics-accent: #fbbf24; /* Lighter amber for dark mode */
+  --robotics-dark: #1e293b; /* Keeps dark background */
+  --robotics-darker: #0f172a;
+  --robotics-light: #334155; /* Darker slate for contrast */
+  --robotics-lighter: #1e293b;
+}
+
+/* Custom styles for robotics theme */
+.hero--primary {
+  background: linear-gradient(135deg, var(--robotics-primary) 0%, var(--robotics-secondary) 100%);
+  color: white;
+}
+
+html[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, var(--robotics-darker) 0%, var(--robotics-dark) 100%);
+  color: white;
+}
+
+/* Custom button styles */
+.button--primary {
+  background-color: var(--robotics-primary);
+  border-color: var(--robotics-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--robotics-secondary);
+  border-color: var(--robotics-secondary);
+}
+
+/* Custom card styles */
+.card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom code block styles */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom sidebar styles */
+.menu {
+  font-size: 0.9rem;
+}
+
+.menu__link--active {
+  border-left: 3px solid var(--robotics-primary);
+  padding-left: 12px;
+}
+
+/* Custom footer styles */
+.footer {
+  background-color: var(--robotics-darker);
+  color: white;
+}
+
+/* Custom navigation styles */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='dark'] .navbar {
+  background-color: var(--robotics-darker);
+}
+
+/* Custom animation for interactive elements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom styles for the hero section animation */
+.hero-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-animated::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .hero--primary {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
