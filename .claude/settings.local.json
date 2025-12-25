@@ -29,7 +29,10 @@
       "Bash(cmd /c \"dir \"\"C:\\\\Users\\\\HP XEON\\\\Desktop\\\\hackathon1\\\\specs\\\\001-ai-book-physical-ai\\\\checklists\\\\\"\" /B\")",
       "Bash(npx serve build)",
       "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
-      "Bash(rm -rf my-websitesrccomponents my-websitesrcpages my-websitestaticimg)"
+      "Bash(rm -rf my-websitesrccomponents my-websitesrcpages my-websitestaticimg)",
+      "Bash(git add my-website/docusaurus.config.js history/prompts/general/4-fix-vercel-deployment-error-new-url.general.prompt.md)",
+      "Bash(git commit -m \"Fix Vercel deployment URL in docusaurus.config.js\n\n- Updated URL to match new Vercel deployment URL: https://hackathon1-wine.vercel.app/\n- This resolves the ''site did not load properly'' error on Vercel\n- Created PHR to document the fix\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
+      "Bash(git push origin 001-ai-book-physical-ai)"
     ]
   }
 }
