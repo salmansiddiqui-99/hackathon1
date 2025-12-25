@@ -7,7 +7,7 @@ const config = {
     v4: true,
   },
 
-  url: 'https://hackathon1-lake-five.vercel.app/',
+  url: 'https://hackathon1-lake-five.vercel.app',
   baseUrl: '/',
 
   onBrokenLinks: 'warn',
