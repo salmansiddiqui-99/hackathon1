@@ -34,7 +34,10 @@
       "Bash(git commit -m \"Fix Vercel deployment URL in docusaurus.config.js\n\n- Updated URL to match new Vercel deployment URL: https://hackathon1-wine.vercel.app/\n- This resolves the ''site did not load properly'' error on Vercel\n- Created PHR to document the fix\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
       "Bash(git push origin 001-ai-book-physical-ai)",
       "Bash(git add history/prompts/general/5-analyze-vercel-build-warnings.general.prompt.md)",
-      "Bash(git commit -m \"Add PHR for analyzing Vercel build warnings\n\n- Documented analysis of Vercel build logs and warnings\n- Confirmed warnings are informational, not errors\n- Build process is proceeding normally\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")"
+      "Bash(git commit -m \"Add PHR for analyzing Vercel build warnings\n\n- Documented analysis of Vercel build logs and warnings\n- Confirmed warnings are informational, not errors\n- Build process is proceeding normally\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
+      "Bash(git add my-website/docusaurus.config.js)",
+      "Bash(git add my-website/docusaurus.config.js my-website/vercel.json)",
+      "Bash(git commit -m \"Fix Docusaurus configuration to resolve ''Unexpected token'' error\n\n- Restored full docusaurus.config.js with proper TypeScript annotations and complete theme configuration\n- Added missing themeConfig elements including footer and prism configuration\n- Restored vercel.json that was accidentally deleted\n- These changes should fix the ''Uncaught SyntaxError: Unexpected token''<'' error on Vercel deployment\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")"
     ]
   }
 }
