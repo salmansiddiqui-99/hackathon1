@@ -27,7 +27,9 @@
       "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
       "Bash(dir \"C:\\\\Users\\\\HP XEON\\\\Desktop\\\\hackathon1\\\\specs\\\\001-ai-book-physical-ai\\\\checklists\"\" /B)",
       "Bash(cmd /c \"dir \"\"C:\\\\Users\\\\HP XEON\\\\Desktop\\\\hackathon1\\\\specs\\\\001-ai-book-physical-ai\\\\checklists\\\\\"\" /B\")",
-      "Bash(npx serve build)"
+      "Bash(npx serve build)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(rm -rf my-websitesrccomponents my-websitesrcpages my-websitestaticimg)"
     ]
   }
 }
